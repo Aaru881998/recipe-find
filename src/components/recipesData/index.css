@@ -1,0 +1,16 @@
+.searchbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.img_map {
+  padding: 100px;
+}
+.background_clr {
+  background-color: #e3ddd5;
+}
+@media screen and (max-width: 420px) {
+  .css-1vm0r4s-MuiPaper-root {
+    width: 250px !important;
+  }
+}

@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import { Appcontext } from "./components/context";
+import AllRoutes from "./components/routers";
+import "./App.css";
 function App() {
+  const [query, setQuery] = useState("");
+  const [search, setSearch] = useState("");
+  const [recipes, setRecipes] = useState([]);
+  const [view, setView] = useState({});
+  console.log("VIE", view);
+  console.log("recipes", recipes);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Appcontext.Provider
+        value={{
+          query,
+          setQuery,
+          search,
+          setSearch,
+          recipes,
+          setRecipes,
+          view,
+          setView,
+        }}
+      >
+        <AllRoutes />
+      </Appcontext.Provider>
     </div>
   );
 }

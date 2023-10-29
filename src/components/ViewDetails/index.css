@@ -1,0 +1,29 @@
+.img_d {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.label_d {
+  margin: 40px 8px;
+  font-weight: 600;
+}
+.typo {
+  font-size: 18px;
+}
+.food_details {
+  color: indianred;
+
+  padding: 20px;
+}
+.title {
+  color: indianred;
+}
+
+.view_data {
+  display: flex;
+  flex-wrap: wrap;
+}
+.view_clr {
+  background-color: #e3ddd5;
+}
